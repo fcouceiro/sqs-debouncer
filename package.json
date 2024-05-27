@@ -1,5 +1,5 @@
 {
-  "name": "sqs-debouncer",
+  "name": "@fcouceiro/sqs-debouncer",
   "version": "0.0.1",
   "description": "Debounce AWS SQS messages based on content",
   "repository": {
@@ -17,6 +17,10 @@
     "debounce",
     "unique"
   ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "type": "module",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",

@@ -7,3 +7,13 @@ test
 public
 .nyc_output
 scripts
+.github
+.mocharc.json
+.nvmrc
+.prettierignore
+.prettierrc.json
+localstack.sh
+tsconfig.cjs.json
+tsconfig.esm.json
+tsconfig.json
+typedoc.json
