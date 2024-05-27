@@ -14,6 +14,14 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      localstack:
+        image: localstack/localstack
+        env:
+          SERVICES: sqs,s3
+          DEFAULT_REGION: us-east-1
+          DATA_DIR: /tmp/localstack/data
+        ports: ["4566:4566"]
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
@@ -35,6 +43,9 @@ jobs:
 
       - name: Run Tests and Linting
         run: npm run test:ci
+        env:
+          AWS_ACCESS_KEY_ID: localstack
+          AWS_SECRET_ACCESS_KEY: localstack
 
       - uses: actions/upload-artifact@v4
         with:
