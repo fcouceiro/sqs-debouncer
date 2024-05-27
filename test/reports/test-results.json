@@ -1,0 +1,252 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 13,
+    "passes": 13,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-27T09:52:19.258Z",
+    "end": "2024-05-27T09:52:19.510Z",
+    "duration": 252
+  },
+  "tests": [
+    {
+      "title": "should debounce end-to-end - webhook example",
+      "fullTitle": "DebouncedSQS Integration Tests with SQS + S3 should debounce end-to-end - webhook example",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.integration.spec.ts",
+      "duration": 92,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should load entries payloads when mode is DISPATCH_MODE_WITH_PAYLOAD",
+      "fullTitle": "DebouncedSQS should load entries payloads when mode is DISPATCH_MODE_WITH_PAYLOAD",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.spec.ts",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should not load entries payloads when mode is DISPATCH_MODE_ONLY_IDS",
+      "fullTitle": "DebouncedSQS should not load entries payloads when mode is DISPATCH_MODE_ONLY_IDS",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getGroupKeyspace should return correct keyspace",
+      "fullTitle": "IndexKeySpace getGroupKeyspace should return correct keyspace",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getGroupKey should return correct key for groupId",
+      "fullTitle": "IndexKeySpace getGroupKey should return correct key for groupId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getEntryKeyspace should return correct keyspace for groupId",
+      "fullTitle": "IndexKeySpace getEntryKeyspace should return correct keyspace for groupId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getEntryKey should return correct key for groupId and entryId",
+      "fullTitle": "IndexKeySpace getEntryKey should return correct key for groupId and entryId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getIdFromKey should return correct id from key",
+      "fullTitle": "IndexKeySpace getIdFromKey should return correct id from key",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getIdFromKey should return correct id from group key",
+      "fullTitle": "IndexKeySpace getIdFromKey should return correct id from group key",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should add and list groups correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should add and list groups correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 13,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should add and list entries correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should add and list entries correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 12,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should handle duplicate entries for the same group correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should handle duplicate entries for the same group correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 16,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete an entry and assert list is empty",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should delete an entry and assert list is empty",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 13,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should debounce end-to-end - webhook example",
+      "fullTitle": "DebouncedSQS Integration Tests with SQS + S3 should debounce end-to-end - webhook example",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.integration.spec.ts",
+      "duration": 92,
+      "currentRetry": 0,
+      "speed": "slow",
+      "err": {}
+    },
+    {
+      "title": "should load entries payloads when mode is DISPATCH_MODE_WITH_PAYLOAD",
+      "fullTitle": "DebouncedSQS should load entries payloads when mode is DISPATCH_MODE_WITH_PAYLOAD",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.spec.ts",
+      "duration": 2,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should not load entries payloads when mode is DISPATCH_MODE_ONLY_IDS",
+      "fullTitle": "DebouncedSQS should not load entries payloads when mode is DISPATCH_MODE_ONLY_IDS",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/debouncer.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getGroupKeyspace should return correct keyspace",
+      "fullTitle": "IndexKeySpace getGroupKeyspace should return correct keyspace",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getGroupKey should return correct key for groupId",
+      "fullTitle": "IndexKeySpace getGroupKey should return correct key for groupId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getEntryKeyspace should return correct keyspace for groupId",
+      "fullTitle": "IndexKeySpace getEntryKeyspace should return correct keyspace for groupId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getEntryKey should return correct key for groupId and entryId",
+      "fullTitle": "IndexKeySpace getEntryKey should return correct key for groupId and entryId",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getIdFromKey should return correct id from key",
+      "fullTitle": "IndexKeySpace getIdFromKey should return correct id from key",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "getIdFromKey should return correct id from group key",
+      "fullTitle": "IndexKeySpace getIdFromKey should return correct id from group key",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/keyspace.spec.ts",
+      "duration": 0,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should add and list groups correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should add and list groups correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 13,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should add and list entries correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should add and list entries correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 12,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should handle duplicate entries for the same group correctly",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should handle duplicate entries for the same group correctly",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 16,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete an entry and assert list is empty",
+      "fullTitle": "UniqueIndex Integration Tests with S3 should delete an entry and assert list is empty",
+      "file": "/Users/dragonboat/Workspace/sqs-debouncer/lib/unique-index/uniqueIndex.integration.spec.ts",
+      "duration": 13,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

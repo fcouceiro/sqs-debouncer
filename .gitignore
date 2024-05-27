@@ -1,0 +1,10 @@
+.vscode/
+node_modules/
+dist/
+coverage/
+.DS_Store
+test.js
+.nyc_output
+public
+test/reports/*
+!test/reports/.keep

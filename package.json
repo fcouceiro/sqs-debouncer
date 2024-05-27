@@ -1,0 +1,180 @@
+{
+  "name": "sqs-debouncer",
+  "version": "0.0.1",
+  "description": "Debounce AWS SQS messages based on content",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fcouceiro/sqs-debouncer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fcouceiro/sqs-debouncer/issues"
+  },
+  "homepage": "https://fcouceiro.github.io/sqs-debouncer/",
+  "author": "Francisco Couceiro",
+  "license": "MIT",
+  "keywords": [
+    "sqs",
+    "debounce",
+    "unique"
+  ],
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "clean": "rm -fr dist/*",
+    "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json",
+    "add-package-jsons": "node ./scripts/addPackageJsons.js",
+    "build": "npm run clean && npm run compile && npm run add-package-jsons",
+    "watch": "tsc --watch",
+    "test": "mocha",
+    "test:ci": "mocha --recursive --full-trace --exit --reporter json > test/reports/test-results.json",
+    "coverage": "c8 mocha && c8 report --reporter=html && c8 report --reporter=json-summary",
+    "lcov": "c8 mocha && c8 report --reporter=lcov",
+    "format": "prettier --log-level warn --write \"**/*.{js,json,jsx,md,ts,tsx,html}\"",
+    "generate-docs": "typedoc"
+  },
+  "release": {
+    "branches": [
+      "main",
+      {
+        "name": "canary",
+        "prerelease": true
+      }
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "breaking",
+              "release": "major"
+            },
+            {
+              "type": "feat",
+              "release": "minor"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "fix",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "release": "patch"
+            },
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "chore",
+                "section": "Chores"
+              },
+              {
+                "type": "docs",
+                "section": "Documentation"
+              },
+              {
+                "type": "refactor",
+                "section": "Refactors"
+              },
+              {
+                "type": "test",
+                "section": "Tests"
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/changelog",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.5",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^13.0.0",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.12.12",
+    "@types/sinon": "^17.0.3",
+    "c8": "^9.1.0",
+    "chai": "^5.1.1",
+    "chai-sorted": "^0.2.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
+    "semantic-release": "^23.1.1",
+    "sinon": "^18.0.0",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.583.0",
+    "@aws-sdk/client-sqs": "^3.583.0",
+    "nanoid": "^5.0.7",
+    "p-limit": "^5.0.0",
+    "sqs-consumer": "^10.3.0"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.583.0",
+    "@aws-sdk/client-sqs": "^3.583.0",
+    "sqs-consumer": "^10.3.0"
+  },
+  "c8": {
+    "include": [
+      "lib/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}
