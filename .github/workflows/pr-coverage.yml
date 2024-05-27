@@ -11,6 +11,14 @@ jobs:
   coverage_report:
     name: Generate coverage report
     runs-on: ubuntu-latest
+    services:
+      localstack:
+        image: localstack/localstack
+        env:
+          SERVICES: sqs,s3
+          DEFAULT_REGION: us-east-1
+          DATA_DIR: /tmp/localstack/data
+        ports: ["4566:4566"]
     strategy:
       matrix:
         node-version: [20.x]
@@ -28,6 +36,9 @@ jobs:
 
       - name: Run Coverage Check
         run: npm run lcov
+        env:
+          AWS_ACCESS_KEY_ID: localstack
+          AWS_SECRET_ACCESS_KEY: localstack
 
       - name: Setup LCOV
         uses: hrishikesh-kadam/setup-lcov@v1
