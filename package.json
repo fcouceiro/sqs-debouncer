@@ -150,7 +150,7 @@
     "c8": "^9.1.0",
     "chai": "^5.1.1",
     "chai-sorted": "^0.2.0",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.2",
     "mocha": "^10.4.0",
     "prettier": "^3.2.5",
     "semantic-release": "^23.1.1",
