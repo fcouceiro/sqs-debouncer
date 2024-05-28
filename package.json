@@ -1,6 +1,6 @@
 {
   "name": "@fcouceiro/sqs-debouncer",
-  "version": "0.0.1",
+  "version": "0.0.0-semantically-released",
   "description": "Debounce AWS SQS messages based on content",
   "repository": {
     "type": "git",
